@@ -42,6 +42,7 @@ module.exports = function (grunt) {
    */
 
   var jsFilesToInject = [
+    'linker/js/jquery.min.js', 
 
     // Below, as a demonstration, you'll see the built-in dependencies 
     // linked in the proper order order
@@ -146,7 +147,16 @@ module.exports = function (grunt) {
           cwd: './assets',
           src: ['**/*.!(coffee)'],
           dest: '.tmp/public'
-        }
+        },
+        {
+          expand: true,
+          cwd: './bower_components/font-awesome/fonts/',
+          src: ['**/*'],
+          dest: '.tmp/public/linker/fonts'
+        },
+        { '.tmp/public/linker/js/jquery.min.js': './bower_components/jquery/dist/jquery.min.js' },
+        { '.tmp/public/linker/js/bootstrap.min.js': './bower_components/bootstrap/dist/js/bootstrap.min.js' },
+        { '.tmp/public/linker/styles/boostrap.min.css': './bower_components/bootstrap/dist/css/bootstrap.min.css' }
         ]
       },
       build: {
