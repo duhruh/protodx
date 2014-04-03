@@ -14,7 +14,8 @@ module.exports = {
   	nickname: 'string'
   	*/
     author: 'string', 
-    body: 'string'
+    body: 'string', 
+    description: 'string'
     
   }
 

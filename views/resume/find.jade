@@ -1,0 +1,101 @@
+extends ../layout
+
+block content
+  .row
+    .col-md-3
+      img(src="http://www.gravatar.com/avatar/53c3e800211ecbf9e38c588f993c128e.jpg?s=150")
+    .col-md-6
+      h1 #{resume.name}
+        small
+          |  Systems Developer
+      ul.list-inline
+        each skill in resume.skills
+          li
+            button.btn.btn-primary.btn-sm 
+              = skill
+      p #{resume.summary}
+  .row
+    h2 Education
+    ul
+      li
+        dl
+          dt University of Central Florida
+          dd Bachelor of Science in Information Technology
+            with minor in Secure Computing and Networks
+  .row
+    h2 Employment
+    ul
+      li
+        dl
+          dt Automation Control Technology Partners Inc, Software Developer
+          dd Created a secure scalable remote access relay to allow multiple end points behind a NAT to communicate and send data. Built a remote access website in Node.js/Express using websockets to act as one of the nodes for the relay. Created an Android API to interact with their custom hardware/software.
+      li
+        dl
+          dt WhiteHotLogic, Software Engineer
+          dd Worked with project manager and other engineers to complete software applications and web pages using various programming languages.
+      li
+        dl
+          dt Highforge Solutions, Web Developer
+          dd Worked on SET3 backend PHP system.
+      li
+        dl
+          dt Hostdime, Server Analyst
+          dd Troubleshooting servers for issues including but not limited to Email, MySQL, SSL, and Apache via SSH and WHM CPanel.
+      li
+        dl
+          dt Elvenlabs, Web Developer
+          dd Worked on web site using Ruby on Rails and version management system GIT. 
+  .row
+    h2 Skills
+    ul
+      li
+        dl
+          dt Software Development
+          dd Primary developer for several software packages deployed at personal, academic, and professional level.
+      li
+        dl
+          dt Programming Languages: Java, C, Perl
+      li
+        dl
+          dt Web Development 
+          dd Familiar with creating web pages and server side languages 
+      li
+        dl
+          dt Client side
+          dd HTML5, XHTML, CSS3, JavaScript, jQuery 
+      li
+        dl
+          dt Server side
+          dd PHP, exposure with Rails, Node.js
+      li
+        dl
+          dt Server Management
+          dd Familiar with setting up and maintaining servers for file sharing, DNS, email, web page and database hosting.
+      li
+        dl
+          dt Database
+          dd Experience creating, manipulating, and querying databases
+      li
+        dl
+          dt Query Languages
+          dd MySQL, SQLITE 
+      li
+        dl
+          dt Remote Access Technologies
+          dd Deployment and use of VNC/RDP protocols/apps from desktop and mobile operating systems.
+      li
+        dl
+          dt Networking
+          dd Several years experience deploying and supporting LANS of 10 or fewer network devices and desktop systems. Understanding of NAT and port forwarding.
+      li
+        dl
+          dt Operating Systems
+          dd Windows x86 and x64, Windows 2003 Server, Linux Ubuntu Server, CentOS, OpenVZ. 
+      li
+        dl
+          dt Design
+          dd Familiar with Photoshop CS5 creating web page content.
+      li
+        dl
+          dt Hardware Assembly
+          dd Building high performance systems used in gaming and graphic design. 

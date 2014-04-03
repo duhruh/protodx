@@ -1,5 +1,5 @@
 /**
- * ResumeController
+ * UserController
  *
  * @module      :: Controller
  * @description	:: A set of functions called `actions`.
@@ -17,35 +17,14 @@
 
 module.exports = {
     
-
-  find:function(req, res, next){
-    var _user = humanize(req.param('id')); 
-
-    Resume.findOneByName(_user).done(function(err, r){
-        r.skills = r.skills.split(','); 
-        res.view({resume: r}); 
-    }); 
-  },  
+  
 
 
   /**
    * Overrides for the settings in `config/controllers.js`
-   * (specific to ResumeController)
+   * (specific to UserController)
    */
   _config: {}
 
   
 };
-function propperCase(word){
-    return word.charAt(0).toUpperCase() + word.slice(1);
-}
-function humanize(str){
-    var _str = str.split('-'); 
-
-    var rval = ''; 
-    for(var i = 0;  i < _str.length; i++){
-        rval += propperCase(_str[i]) + ' '; 
-    }
-
-    return rval.substr(0, rval.length-1); 
-}
